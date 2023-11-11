@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Electricity Bill Calculator"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_margin="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Morning Usage (kwh)"
+        android:textSize="16sp"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/et_morning_usage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter morning usage in kwh"
+        android:textSize="24sp"
+        android:inputType="numberDecimal"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Evening Usage (kwh)"
+        android:textSize="16sp"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/et_evening_usage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter evening usage in kwh"
+        android:textSize="24sp"
+        android:inputType="numberDecimal"
+        android:layout_margin="8dp"/>
+
+    <Switch
+        android:id="@+id/sw_is_renewable"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Use renewable energy source?"
+        android:textSize="20sp"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:textSize="16sp"
+            android:backgroundTint="#03A9F4"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textSize="16sp"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tv_result_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charge Breakdown"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_margin="8dp"/>
+        <TextView
+            android:id="@+id/tv_charge_breakdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingStart="60dp"
+            android:layout_margin="8dp" />
+        <TextView
+            android:id="@+id/tv_you_must_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEB3B"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
